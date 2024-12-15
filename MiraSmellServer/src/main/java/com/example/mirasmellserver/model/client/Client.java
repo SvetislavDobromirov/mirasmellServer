@@ -226,4 +226,16 @@ public class Client{
 			",groupSmells = '" + groupSmells + '\'' + 
 			"}";
 		}
+
+	public Boolean getImplantsInfo() {
+		return implantsInfo;
+	}
+
+	public String getConclusion() {
+		return conclusion;
+	}
+
+	public void setConclusion(String conclusion) {
+		this.conclusion = conclusion;
+	}
 }
