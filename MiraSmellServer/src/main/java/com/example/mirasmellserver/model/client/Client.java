@@ -70,6 +70,9 @@ public class Client{
 	@JsonProperty("requestClient")
 	private String requestClient;
 
+
+	@JsonProperty("conclusion")
+	private String conclusion;
 	@JsonProperty("groupSmells")
 	private GroupSmells groupSmells;
 
