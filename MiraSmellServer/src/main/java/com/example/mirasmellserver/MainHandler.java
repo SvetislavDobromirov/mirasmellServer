@@ -28,7 +28,7 @@ public class MainHandler {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Client> createClient(@RequestBody Client client) {
         System.out.println("PUT___PUT");
-       // System.out.println(client.getFemaleInfo().toString());
+       System.out.println(client.toString());
         clientRepository.addClient(client);
         return ResponseEntity.ok(client);
     }
