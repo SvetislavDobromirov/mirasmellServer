@@ -204,28 +204,7 @@ public class Client{
 		return groupSmells;
 	}
 
-	@Override
- 	public String toString(){
-		return 
-			"Client{" + 
-			"hormonalDrugsInfo = '" + hormonalDrugsInfo + '\'' + 
-			",listDates = '" + listDates + '\'' + 
-			",femaleInfo = '" + femaleInfo + '\'' + 
-			",sex = '" + sex + '\'' + 
-			",chronicIllness = '" + chronicIllness + '\'' + 
-			",somaticConclusion = '" + somaticConclusion + '\'' + 
-			",uuid = '" + uuid + '\'' + 
-			",dateLastTesting = '" + dateLastTesting + '\'' + 
-			",transcript = '" + transcript + '\'' + 
-			",name = '" + name + '\'' + 
-			",additionalInfo = '" + additionalInfo + '\'' + 
-			",psychoemlyonicConclusion = '" + psychoemlyonicConclusion + '\'' + 
-			",implantsInfo = '" + implantsInfo + '\'' + 
-			",age = '" + age + '\'' + 
-			",requestClient = '" + requestClient + '\'' + 
-			",groupSmells = '" + groupSmells + '\'' + 
-			"}";
-		}
+
 
 	public Boolean getImplantsInfo() {
 		return implantsInfo;
@@ -237,5 +216,29 @@ public class Client{
 
 	public void setConclusion(String conclusion) {
 		this.conclusion = conclusion;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("Client{");
+		sb.append("hormonalDrugsInfo=").append(hormonalDrugsInfo);
+		sb.append(", listDates=").append(listDates);
+		sb.append(", femaleInfo=").append(femaleInfo);
+		sb.append(", sex='").append(sex).append('\'');
+		sb.append(", chronicIllness='").append(chronicIllness).append('\'');
+		sb.append(", somaticConclusion='").append(somaticConclusion).append('\'');
+		sb.append(", uuid='").append(uuid).append('\'');
+		sb.append(", dateLastTesting='").append(dateLastTesting).append('\'');
+		sb.append(", transcript='").append(transcript).append('\'');
+		sb.append(", name=").append(name);
+		sb.append(", additionalInfo='").append(additionalInfo).append('\'');
+		sb.append(", psychoemlyonicConclusion='").append(psychoemlyonicConclusion).append('\'');
+		sb.append(", implantsInfo=").append(implantsInfo);
+		sb.append(", age=").append(age);
+		sb.append(", requestClient='").append(requestClient).append('\'');
+		sb.append(", conclusion='").append(conclusion).append('\'');
+		sb.append(", groupSmells=").append(groupSmells);
+		sb.append('}');
+		return sb.toString();
 	}
 }
