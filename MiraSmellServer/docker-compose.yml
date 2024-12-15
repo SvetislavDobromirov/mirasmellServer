@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    image: pecangoo/mirasmell:0.01  # Замените на имя вашего образа
+    build:
+
+      context: .  # Указывает на текущую директорию, где находится Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
+
+    ports:
+      - "9123:8070"  # Пробрасываем порт 8070
+    depends_on:
+      - mongodb  # Указывает, что приложение зависит от MongoDB
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/mongo  # Замените на имя вашей базы данных
+
+  mongodb:
+    image: mongo:latest  # Используем официальный образ MongoDB
+    ports:
+      - "27017:27017"  # Пробрасываем стандартный порт MongoDB
+    volumes:
+      - mongo-data:/data/db  # Хранение данных MongoDB в volume
+
+volumes:
+  mongo-data:  # Объявляем volume для хранения данных
