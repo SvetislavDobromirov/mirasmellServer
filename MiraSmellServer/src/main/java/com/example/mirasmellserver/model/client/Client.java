@@ -29,7 +29,7 @@ public class Client{
 	private HormonalDrugsInfo hormonalDrugsInfo;
 
 	@JsonProperty("listDates")
-	private List<Integer> listDates;
+	private List<Long> listDates;
 
 	@JsonProperty("femaleInfo")
 	private FemaleInfo femaleInfo;
@@ -88,11 +88,11 @@ public class Client{
 		return hormonalDrugsInfo;
 	}
 
-	public void setListDates(List<Integer> listDates){
+	public void setListDates(List<Long> listDates){
 		this.listDates = listDates;
 	}
 
-	public List<Integer> getListDates(){
+	public List<Long> getListDates(){
 		return listDates;
 	}
 
