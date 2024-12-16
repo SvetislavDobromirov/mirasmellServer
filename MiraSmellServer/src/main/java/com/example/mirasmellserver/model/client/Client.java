@@ -52,6 +52,10 @@ public class Client{
 	@JsonProperty("transcript")
 	private String transcript;
 
+	@JsonProperty("recommendations")
+	private String recommendations;
+
+
 	@JsonProperty("name")
 	private Name name;
 
@@ -218,6 +222,14 @@ public class Client{
 		this.conclusion = conclusion;
 	}
 
+	public String getRecommendations() {
+		return recommendations;
+	}
+
+	public void setRecommendations(String recommendations) {
+		this.recommendations = recommendations;
+	}
+
 	@Override
 	public String toString() {
 		final StringBuilder sb = new StringBuilder("Client{");
@@ -230,6 +242,7 @@ public class Client{
 		sb.append(", uuid='").append(uuid).append('\'');
 		sb.append(", dateLastTesting='").append(dateLastTesting).append('\'');
 		sb.append(", transcript='").append(transcript).append('\'');
+		sb.append(", recommendations='").append(recommendations).append('\'');
 		sb.append(", name=").append(name);
 		sb.append(", additionalInfo='").append(additionalInfo).append('\'');
 		sb.append(", psychoemlyonicConclusion='").append(psychoemlyonicConclusion).append('\'');

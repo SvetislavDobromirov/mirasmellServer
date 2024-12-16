@@ -19,6 +19,9 @@ public class FemaleInfo{
 	@JsonProperty("isContraceptives")
 	private Boolean isContraceptives;
 
+	@JsonProperty("isBreastFeeding")
+	private Boolean isBreastFeeding;
+
 	@JsonProperty("isPregnant")
 	private Boolean isPregnant;
 
@@ -62,15 +65,44 @@ public class FemaleInfo{
 		return isPregnant;
 	}
 
+	public void setBeautyInjections(Boolean beautyInjections) {
+		isBeautyInjections = beautyInjections;
+	}
+
+	public Boolean getContraceptives() {
+		return isContraceptives;
+	}
+
+	public void setContraceptives(Boolean contraceptives) {
+		isContraceptives = contraceptives;
+	}
+
+	public Boolean getBreastFeeding() {
+		return isBreastFeeding;
+	}
+
+	public void setBreastFeeding(Boolean breastFeeding) {
+		isBreastFeeding = breastFeeding;
+	}
+
+	public Boolean getPregnant() {
+		return isPregnant;
+	}
+
+	public void setPregnant(Boolean pregnant) {
+		isPregnant = pregnant;
+	}
+
 	@Override
- 	public String toString(){
-		return 
-			"FemaleInfo{" + 
-			"isBeautyInjections = '" + isBeautyInjections + '\'' + 
-			",beautyInjections = '" + beautyInjections + '\'' + 
-			",dayOfMenstrual = '" + dayOfMenstrual + '\'' + 
-			",isContraceptives = '" + isContraceptives + '\'' + 
-			",isPregnant = '" + isPregnant + '\'' + 
-			"}";
-		}
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("FemaleInfo{");
+		sb.append("isBeautyInjections=").append(isBeautyInjections);
+		sb.append(", beautyInjections='").append(beautyInjections).append('\'');
+		sb.append(", dayOfMenstrual=").append(dayOfMenstrual);
+		sb.append(", isContraceptives=").append(isContraceptives);
+		sb.append(", isBreastFeeding=").append(isBreastFeeding);
+		sb.append(", isPregnant=").append(isPregnant);
+		sb.append('}');
+		return sb.toString();
+	}
 }
